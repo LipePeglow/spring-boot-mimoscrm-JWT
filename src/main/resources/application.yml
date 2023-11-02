@@ -1,0 +1,22 @@
+spring:
+    datasource:
+       url: jdbc:postgresql://localhost:5432/mimos_kids
+       username:
+       password:
+    jpa:
+        hibernate:
+          ddl-auto: create-drop
+        show-sql: true
+        properties:
+           hibernate:
+            format_sql: true
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+    application:
+      security:
+        jwt:
+          secret-key: d74428e38ed5986efcfc7389a76542e7107c0e8dd961e4290a5ab1b5dc9bc095
+          expiration: 86400000 # a day
+          refresh-token:
+            expiration: 604800000 # 7 days
